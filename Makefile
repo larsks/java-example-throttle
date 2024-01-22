@@ -1,4 +1,4 @@
-SRCS = $(wildcard *.java)
+SRCS = $(wildcard Pck1/*.java)
 CLASSES = $(SRCS:.java=.class)
 
 %.class: %.java
@@ -8,7 +8,7 @@ all: $(CLASSES)
 
 .PHONY: test
 test: all
-	java -ea MainClass
+	java -ea Pck1.MainClass
 
 clean:
 	rm -f $(CLASSES)
